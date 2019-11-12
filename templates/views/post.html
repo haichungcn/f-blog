@@ -1,0 +1,53 @@
+{% extends './base.html' %}
+
+{% block head %}
+<title>New Post</title>
+{% endblock %}
+
+{% block body %}
+<div class="row cointainer-fluid blogPostForm d-flex flex-column align-items-center pt-5">
+    <h1>New Blog Post</h1>
+    <hr>
+    <form name="newPost" id="postForm" class="col-6" novalidate="" _lpchecked="1" method="POST">
+        <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+                <label>Title</label>
+                <input name="title" type="text" class="form-control" placeholder="Post Title" id="title" required=""
+                    data-validation-required-message="Please enter a title for your post."
+                    style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAfBJREFUWAntVk1OwkAUZkoDKza4Utm61iP0AqyIDXahN2BjwiHYGU+gizap4QDuegWN7lyCbMSlCQjU7yO0TOlAi6GwgJc0fT/fzPfmzet0crmD7HsFBAvQbrcrw+Gw5fu+AfOYvgylJ4TwCoVCs1ardYTruqfj8fgV5OUMSVVT93VdP9dAzpVvm5wJHZFbg2LQ2pEYOlZ/oiDvwNcsFoseY4PBwMCrhaeCJyKWZU37KOJcYdi27QdhcuuBIb073BvTNL8ln4NeeR6NRi/wxZKQcGurQs5oNhqLshzVTMBewW/LMU3TTNlO0ieTiStjYhUIyi6DAp0xbEdgTt+LE0aCKQw24U4llsCs4ZRJrYopB6RwqnpA1YQ5NGFZ1YQ41Z5S8IQQdP5laEBRJcD4Vj5DEsW2gE6s6g3d/YP/g+BDnT7GNi2qCjTwGd6riBzHaaCEd3Js01vwCPIbmWBRx1nwAN/1ov+/drgFWIlfKpVukyYihtgkXNp4mABK+1GtVr+SBhJDbBIubVw+Cd/TDgKO2DPiN3YUo6y/nDCNEIsqTKH1en2tcwA9FKEItyDi3aIh8Gl1sRrVnSDzNFDJT1bAy5xpOYGn5fP5JuL95ZjMIn1ya7j5dPGfv0A5eAnpZUY3n5jXcoec5J67D9q+VuAPM47D3XaSeL4AAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;"
+                    aria-invalid="false">
+                <p class="help-block text-danger"></p>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+                <label>Lead Paragraph</label>
+                <input name="lead" type="text" class="form-control" placeholder="Lead Pagragraph" id="lead" required=""
+                    data-validation-required-message="Please enter the lead paragraph." aria-invalid="false">
+                <p class="help-block text-danger"></p>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+                <label>Body</label>
+                <textarea name="body" rows="5" class="form-control" placeholder="body" id="body" required=""
+                    data-validation-required-message="Please enter the body for your post." aria-invalid="false"></textarea>
+                <p class="help-block text-danger"></p>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>Author</label>
+                <input name="author" type="text" class="form-control" placeholder="Author" id="author" required=""
+                    data-validation-required-message="Please enter your Author." aria-invalid="false">
+                <p class="help-block text-danger"></p>
+            </div>
+        </div>
+        <br>
+        <div id="success"></div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-outline-primary" id="postbutton">Post</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
