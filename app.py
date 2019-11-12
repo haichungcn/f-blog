@@ -23,7 +23,13 @@ class Blog(db.Model):
     created = db.Column(db.DateTime, server_default = db.func.now())
     updated = db.Column(db.DateTime, server_default = db.func.now(), server_onupdate = db.func.now())
 
+class User():
+
 db.create_all()
+
+@app.route('/login', methods = ['GET, 'POST'])
+def login():
+
 
 @app.route('/', methods=['GET'])
 def postfeed():
